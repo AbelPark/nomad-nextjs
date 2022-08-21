@@ -1,7 +1,15 @@
-import '../styles/globals.css'
+import Layout from "../components/Layout";
 
-function MyApp({ Component, pageProps }) {
-  return <Component {...pageProps} />
+export default function App({ Component, pageProps }) {
+  return (
+    <Layout>
+      <Component {...pageProps} />
+      <h1>hello</h1>
+      <style jsx global>{`
+        h1 {
+          border: 2px solid red;
+        }
+      `}</style>
+    </Layout>
+  );
 }
-
-export default MyApp
